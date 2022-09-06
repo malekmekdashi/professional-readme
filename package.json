@@ -1,0 +1,23 @@
+{
+  "name": "static-site",
+  "version": "1.0.0",
+  "description": "Create a professional README.md with this generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Malek Mekdashi",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malekmekdashi/professional-readme.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/malekmekdashi/professional-readme/issues"
+  },
+  "homepage": "https://github.com/malekmekdashi/professional-readme#readme"
+}
