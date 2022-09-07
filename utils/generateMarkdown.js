@@ -4,17 +4,22 @@ function renderLicenseBadge(license) {
   if (!license) {
     return ``;
   } else {
-    return `[![${license} license](https://img.shields.io/badge/License-${license}-blue.svg)](${renderLicenseLink(license)})`
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
   }  
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license === MIT) {
-    return `https://malekmekdashi.mit-license.org`;
-  } 
-}
+  switch(license) {
+    case "MIT":
+     return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+    case "Apache":
+      return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+    case "GNU":
+      return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+      
+  }}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -31,29 +36,19 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
 
-  ${renderLicenseBadge(data.licenses)}
+  ${renderLicenseLink(data.license)}
   
   ## Table of Contents
   * [Description](#description)
-  * [Installation](#installation)
-  * [Usage](#usage)
   * [Licenses](#licenses)
   * [Contributing](#contributing)
-  * [Contact Information](#Contact Information)
+  * [Contact Information](#Contact-Information)
   * [Credits](#credits)
   
   ## Description
   ${data.description}
-  ## Installation
-  ${data.installation}
-  ## Usage
-  ${data.usage}  
   
-  
-  ${renderLicenseSection(data.licenses)}
-
-  ## Contributing
-  ${data.contributing}
+  ${renderLicenseSection(data.license)}
 
   ## Contact Information
   Github: https://github.com/${data.github}

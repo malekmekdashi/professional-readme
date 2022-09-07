@@ -27,8 +27,9 @@ const questions = () => {
             message: 'What is your email address?',
         },
         {
-            type: 'input',
-            name: 'licenses',
+            type: 'list',
+            choices: ['MIT', 'Apache', 'GNU'],
+            name: 'license',
             message: 'What licenses did you use for this project?',
         },
         {
@@ -64,10 +65,3 @@ const init = () => {
  
 // Function call to initialize app
 init();
-
-// function init() {
-//  inquirer.prompt(questions).then(function(userInput) {
-//     const data = generateMarkdown(userInput)
-//      fs.writeFile('./dist/README.md', data, err =>{
-//       err ? console.log(err) : console.log('Success! You have creadted a new README file.')})
-//     })};
