@@ -19,7 +19,7 @@
   Github: https://github.com/malekmekdashi
   Email: malekmekdashi@gmail.com
 
-  Link to Github repo: 
+  Link to video: https://drive.google.com/file/d/1_oWMI5E8UKJ_FGVghkwD-0IW6Dxt5Bjj/view 
 
   ## Credits
   Malek Mekdashi
